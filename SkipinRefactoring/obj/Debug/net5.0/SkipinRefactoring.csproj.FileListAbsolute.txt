@@ -1,0 +1,16 @@
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\bin\Debug\net5.0\SkipinRefactoring.exe
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\bin\Debug\net5.0\SkipinRefactoring.deps.json
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\bin\Debug\net5.0\SkipinRefactoring.runtimeconfig.json
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\bin\Debug\net5.0\SkipinRefactoring.runtimeconfig.dev.json
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\bin\Debug\net5.0\SkipinRefactoring.dll
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\bin\Debug\net5.0\ref\SkipinRefactoring.dll
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\bin\Debug\net5.0\SkipinRefactoring.pdb
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\obj\Debug\net5.0\SkipinRefactoring.csproj.AssemblyReference.cache
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\obj\Debug\net5.0\SkipinRefactoring.GeneratedMSBuildEditorConfig.editorconfig
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\obj\Debug\net5.0\SkipinRefactoring.AssemblyInfoInputs.cache
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\obj\Debug\net5.0\SkipinRefactoring.AssemblyInfo.cs
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\obj\Debug\net5.0\SkipinRefactoring.csproj.CoreCompileInputs.cache
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\obj\Debug\net5.0\SkipinRefactoring.dll
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\obj\Debug\net5.0\ref\SkipinRefactoring.dll
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\obj\Debug\net5.0\SkipinRefactoring.pdb
+D:\UnityProjects\Патерны2DИгра\SkipinRefactoring\obj\Debug\net5.0\SkipinRefactoring.genruntimeconfig.cache
