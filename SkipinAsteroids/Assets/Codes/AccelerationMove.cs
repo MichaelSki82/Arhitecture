@@ -2,11 +2,11 @@ using UnityEngine;
 
 namespace SkipinAsteroids
 {
-    internal sealed class AccelerationMove : MoveTransform
+    internal  class AccelerationMove : MoveMovement
     {
         private readonly float _acceleration;
 
-        public AccelerationMove(Transform transform, float speed, float acceleration) : base(transform, speed)
+        public AccelerationMove(Rigidbody playerRigidbody, float speed, float acceleration) : base(playerRigidbody, speed)
         {
             _acceleration = acceleration;
         }

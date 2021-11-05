@@ -6,67 +6,98 @@ namespace SkipinAsteroids
 {
     internal sealed class Player : MonoBehaviour
     {
-        [SerializeField] private float _speed;
-        [SerializeField] private float _acceleration;
-        [SerializeField] private float _hp;
-        [SerializeField] private Rigidbody2D _bullet;
-        [SerializeField] private Transform _barrel;
+        
+        //[SerializeField] private Rigidbody2D _bullet;
+        //[SerializeField] private Transform _barrel;
+        private IShootingController _shootingController;
+        
+        private Transform _bulletStartPosition;
         [SerializeField] private float _force;
+
+        private ShipModel _shipModel;
+        private ShipView _shipView;
+        private Rigidbody2D _rbPlayer;
+        private Vector2 _movementVector2;
+        private Rigidbody _playerRigidbody;
+        private float _health;
+
         
         private Camera _camera;
-        private Ship _ship;
-        Shooting shoot;
+        
+        
+        
+        AccelerationMove accelMove;
+        RotationShip rotship;
 
         private void Start()
         {
+            _shipModel = new ShipModel(1f, 100f, 10f);
+            _shipView = FindObjectOfType<ShipView>();
             _camera = Camera.main;
-            var moveTransform = new AccelerationMove(transform, _speed, _acceleration);
-            var rotation = new RotationShip(transform);
-            shoot = new Shooting(_barrel, _bullet, _force);
+            _health = _shipModel.Health;
+           
+            accelMove = new AccelerationMove(_playerRigidbody, _shipModel.Speed, _shipModel.Acceleration);
+            rotship = new RotationShip( transform);
+
+            _bulletStartPosition = FindObjectOfType<BulletPoint>().transform;
+            _shootingController = new ShootingController();
             
-            
-            _ship = new Ship(moveTransform, rotation);
+           
+            _rbPlayer = _shipView.GetComponent<Rigidbody2D>();
+
+                 
+                 
 
 
         }
 
         private void Update()
         {
-            var direction = Input.mousePosition - _camera.WorldToScreenPoint(transform.position);
-            _ship.Rotation(direction);
 
-            _ship.Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), Time.deltaTime);
+            var direction = Input.mousePosition - _camera.WorldToScreenPoint(transform.position);
+            rotship.Rotation(direction);
+            
+            
+
+            
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
+                accelMove.AddAcceleration();            
                                 
-                _ship.AddAcceleration();
-                
             }
 
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                
-                 _ship.RemoveAcceleration();
+                accelMove.RemoveAcceleration();
                 
             }
 
             if (Input.GetButtonDown("Fire1"))
             {
-                
-                shoot.Shoot();
+                Debug.Log("${FindObjectOfType<BulletPoint>()transform.position");
+                _shootingController.Shooting.Shoot(FindObjectOfType<BulletPoint>().transform);
             }
         }
 
+        private void FixedUpdate()
+        {
+            _movementVector2.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            _rbPlayer.AddForce(_movementVector2 * _shipModel.Speed, ForceMode2D.Impulse);
+        }
+
+
+
+
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (_hp <= 0)
+            if (_health <= 0)
             {
                 Destroy(gameObject);
             }
             else
             {
-                _hp--;
+                _health--;
             }
         }
     }
