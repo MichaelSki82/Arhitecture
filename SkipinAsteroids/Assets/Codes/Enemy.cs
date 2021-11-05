@@ -38,7 +38,7 @@ namespace SkipinAsteroids
 
         public static Asteroid CreateAsteroidEnemy(Health hp)
         {
-            var enemy = Instantiate(Resources.Load<Asteroid>("Enemy/Asteroid"));
+            var enemy = Instantiate(Resources.Load<Asteroid>("Enemy/AsteroidBig"));
 
             enemy.Health = hp;
 

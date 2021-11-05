@@ -46,7 +46,7 @@ namespace SkipinAsteroids.Object_Pool
             var enemy = enemies.FirstOrDefault(a => !a.gameObject.activeSelf);
             if (enemy == null)
             {
-                var laser = Resources.Load<Asteroid>("Enemy/Asteroid");
+                var laser = Resources.Load<Asteroid>("Enemy/AsteroidBig");
                 for(var i = 0; i < _capacityPool; i++)
                 {
                     var instantiate = Object.Instantiate(laser);
