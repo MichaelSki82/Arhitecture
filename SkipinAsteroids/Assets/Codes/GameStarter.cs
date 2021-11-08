@@ -25,6 +25,9 @@ namespace SkipinAsteroids
             var enemy = enemyPool.GetEnemy("Asteroid");
             enemy.transform.position = Vector3.one;
             enemy.gameObject.SetActive(true);
+
+
+
         }
 
        

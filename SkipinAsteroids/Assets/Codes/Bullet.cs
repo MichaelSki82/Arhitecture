@@ -11,7 +11,7 @@ namespace SkipinAsteroids
     {
        
         [SerializeField] private float _damage;
-        //private IBulletFactory _factory;
+        
         public Rigidbody2D Rigidbody2D;
 
         private Transform _bulletPool;

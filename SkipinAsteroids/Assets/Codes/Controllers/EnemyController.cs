@@ -6,26 +6,23 @@ using static UnityEngine.Random;
 
 namespace SkipinAsteroids
 {
-    public class EnemyController : MonoBehaviour//IController
+    public class EnemyController : IController
     {
-        private ModelEnemy _modelEnemy;
+        private EnemyModel _modelEnemy;
         private FactoryEnemy _factoryEnemy;
 
         private List<EnemyView> _enemys = new List<EnemyView>();
 
         private int _count = 7;
         
-        public EnemyController(ModelEnemy modelEnemy, FactoryEnemy factoryEnemy)
+        public EnemyController(EnemyModel modelEnemy, FactoryEnemy factoryEnemy)
         {
             _modelEnemy = modelEnemy;
             _factoryEnemy = factoryEnemy;
             SpawnEnemys(_count);
         }
 
-        private void Start()
-        {
-            SpawnEnemys(7);
-        }
+       
 
         public void SpawnEnemys(int value)
         {

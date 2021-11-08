@@ -5,7 +5,7 @@ using System;
 
 namespace SkipinAsteroids
 {
-    public class EnemyView : MonoBehaviour
+    public class EnemyView : MonoBehaviour, IEnemy
     {
         public event Action OnDeath;
 

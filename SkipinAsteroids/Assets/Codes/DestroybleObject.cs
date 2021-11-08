@@ -1,6 +1,10 @@
-﻿namespace SkipinAsteroids
+﻿
+using UnityEngine;
+
+
+namespace SkipinAsteroids
 {
-    internal class DestroybleObject
+    internal class DestroybleObject: MonoBehaviour
     {
     }
 }

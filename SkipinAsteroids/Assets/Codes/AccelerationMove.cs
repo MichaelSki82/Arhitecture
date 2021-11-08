@@ -5,10 +5,12 @@ namespace SkipinAsteroids
     internal  class AccelerationMove : MoveMovement
     {
         private readonly float _acceleration;
+        private readonly float _speed;
 
-        public AccelerationMove(Rigidbody playerRigidbody, float speed, float acceleration) : base(playerRigidbody, speed)
+        public AccelerationMove(Rigidbody2D playerRigidbody, float speed, float acceleration) : base(playerRigidbody, speed)
         {
             _acceleration = acceleration;
+            _speed = speed;
         }
 
         public void AddAcceleration()
