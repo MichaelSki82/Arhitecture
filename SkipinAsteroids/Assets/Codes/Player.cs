@@ -6,28 +6,27 @@ namespace SkipinAsteroids
 {
     internal sealed class Player : MonoBehaviour
     {
-        
-        //[SerializeField] private Rigidbody2D _bullet;
-        //[SerializeField] private Transform _barrel;
-        private IShootingController _shootingController;
-        
         private Transform _bulletStartPosition;
-        [SerializeField] private float _force;
-
+       
         private ShipModel _shipModel;
         private ShipView _shipView;
         private Rigidbody2D _rbPlayer;
         private Vector2 _movementVector2;
         private Rigidbody _playerRigidbody;
         private float _health;
-
+        Shooting shoot;
         
         private Camera _camera;
-        
-        
-        
+        MoveMovement moveMove;
         AccelerationMove accelMove;
         RotationShip rotship;
+
+        //EnemyController _enemyController;
+        //private EnemyView _enemyView;
+        //private ModelEnemy _modelEnemy;
+        //private FactoryEnemy _factoryEnemy;
+        //private GameResourses _gameResourses;
+        // private int countAsteriods = 10;
 
         private void Start()
         {
@@ -35,15 +34,19 @@ namespace SkipinAsteroids
             _shipView = FindObjectOfType<ShipView>();
             _camera = Camera.main;
             _health = _shipModel.Health;
-           
-            accelMove = new AccelerationMove(_playerRigidbody, _shipModel.Speed, _shipModel.Acceleration);
-            rotship = new RotationShip( transform);
-
+           _rbPlayer = _shipView.GetComponent<Rigidbody2D>();
+            accelMove = new AccelerationMove(_rbPlayer, _shipModel.Speed, _shipModel.Acceleration);
+            rotship = new RotationShip( _shipView.transform);
+            shoot = new Shooting();
             _bulletStartPosition = FindObjectOfType<BulletPoint>().transform;
-            _shootingController = new ShootingController();
+            moveMove = new MoveMovement(_rbPlayer, _shipModel.Speed);
+            //_modelEnemy = new ModelEnemy(1f, 5f);
+            //_gameResourses = new GameResourses();
+            //_factoryEnemy = new FactoryEnemy(_gameResourses);
+            //_enemyController = new EnemyController(_modelEnemy, _factoryEnemy);
             
            
-            _rbPlayer = _shipView.GetComponent<Rigidbody2D>();
+            
 
                  
                  
@@ -56,13 +59,14 @@ namespace SkipinAsteroids
 
             var direction = Input.mousePosition - _camera.WorldToScreenPoint(transform.position);
             rotship.Rotation(direction);
-            
-            
+
+            //_enemyController.SpawnEnemys(_countAsteriods);
 
             
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
+                
                 accelMove.AddAcceleration();            
                                 
             }
@@ -75,15 +79,17 @@ namespace SkipinAsteroids
 
             if (Input.GetButtonDown("Fire1"))
             {
-                Debug.Log("${FindObjectOfType<BulletPoint>()transform.position");
-                _shootingController.Shooting.Shoot(FindObjectOfType<BulletPoint>().transform);
+                
+                shoot.Shoot((FindObjectOfType<BulletPoint>().transform));
             }
         }
 
         private void FixedUpdate()
         {
-            _movementVector2.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            _rbPlayer.AddForce(_movementVector2 * _shipModel.Speed, ForceMode2D.Impulse);
+            //_movementVector2.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+           // _rbPlayer.AddForce(_movementVector2 * _shipModel.Speed, ForceMode2D.Impulse);
+            moveMove.Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
         }
 
 

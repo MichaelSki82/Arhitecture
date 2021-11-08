@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace SkipinAsteroids
 {
-    public   class Shooting 
+    public   class Shooting : IShoot
     {
         private BulletPool _bulletPool;
         //private Transform _barrel;
-        //private float _force;
+        private float _force = 10f;
         //private Rigidbody2D _bullet;
 
         //public Shooting(Transform barrel, Rigidbody2D bullet, float force)
@@ -36,7 +36,7 @@ namespace SkipinAsteroids
             _bullet.transform.position = bulletStartPosition.position;
             _bullet.transform.rotation = bulletStartPosition.rotation;
             _bullet.gameObject.SetActive(true);
-            _bullet.Rigidbody2D.AddForce(bulletStartPosition.position, ForceMode2D.Force);
+            _bullet.Rigidbody2D.AddForce(bulletStartPosition.transform.up.normalized *_force, ForceMode2D.Impulse);
 
         }
     }

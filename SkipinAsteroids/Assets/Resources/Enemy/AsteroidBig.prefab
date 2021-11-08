@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7994394866340416530}
   - component: {fileID: 3627489413447457745}
   - component: {fileID: 1601001439059957146}
+  - component: {fileID: -6434510679926625312}
   m_Layer: 0
   m_Name: AsteroidBig
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300006, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -144,3 +145,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.07, y: 0.87}
   m_EdgeRadius: 0
+--- !u!114 &-6434510679926625312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7648404780244858904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2f13ae7c0f42045a32870be7d269ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

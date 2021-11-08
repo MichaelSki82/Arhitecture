@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Codes\EnemyFactory\AsteroidSmall.cs" />
     <Compile Include="Assets\Codes\EnemyFactory\AsteroidBig.cs" />
+    <Compile Include="Assets\Codes\DestroybleObject.cs" />
     <Compile Include="Assets\Codes\Interfaces\IRotation.cs" />
     <Compile Include="Assets\Codes\AsteroidFactroy.cs" />
     <Compile Include="Assets\Codes\Asteroid.cs" />
@@ -65,13 +66,18 @@
     <Compile Include="Assets\Codes\Interfaces\IEnemyFactory.cs" />
     <Compile Include="Assets\Codes\EnemyPool.cs" />
     <Compile Include="Assets\Codes\AccelerationMove.cs" />
+    <Compile Include="Assets\Codes\BulletPoint.cs" />
     <Compile Include="Assets\Codes\Player.cs" />
+    <Compile Include="Assets\Codes\BulletPool.cs" />
     <Compile Include="Assets\Codes\MoveMovement.cs" />
     <Compile Include="Assets\Codes\Views\EnemyView.cs" />
     <Compile Include="Assets\Codes\Health.cs" />
     <Compile Include="Assets\Codes\Shooting.cs" />
+    <Compile Include="Assets\Codes\Bullet.cs" />
     <Compile Include="Assets\Codes\Models\ShipModel.cs" />
     <Compile Include="Assets\Codes\RotationShip.cs" />
+    <Compile Include="Assets\Codes\Interfaces\ITakeDamage.cs" />
+    <Compile Include="Assets\Codes\Interfaces\IBulletFactory.cs" />
     <Compile Include="Assets\Codes\GameStarter.cs" />
     <Compile Include="Assets\Codes\Enemys.cs" />
     <Compile Include="Assets\Codes\Interfaces\IMove.cs" />
@@ -82,15 +88,10 @@
     <Compile Include="Assets\Codes\GameResourses.cs" />
     <Compile Include="Assets\Codes\FactoryEnemy.cs" />
     <Compile Include="Assets\Codes\Interfaces\IController.cs" />
-    <Compile Include="Assets\Codes\Models\ModelEnemy.cs" />
-    <Compile Include="Assets\Codes\BulletPool.cs" />
-    <Compile Include="Assets\Codes\Bullet.cs" />
-    <Compile Include="Assets\Codes\DestroybleObject.cs" />
-    <Compile Include="Assets\Codes\Interfaces\ITakeDamage.cs" />
-    <Compile Include="Assets\Codes\Interfaces\IBulletFactory.cs" />
-    <Compile Include="Assets\Codes\BulletPoint.cs" />
-    <Compile Include="Assets\Codes\ShootingController.cs" />
-    <Compile Include="Assets\Codes\Interfaces\IShootingController.cs" />
+    <Compile Include="Assets\Codes\Models\EnemyModel.cs" />
+    <Compile Include="Assets\Codes\Interfaces\IShoot.cs" />
+    <Compile Include="Assets\Codes\Interfaces\IEnemy.cs" />
+    <Compile Include="Assets\Codes\Borders.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
