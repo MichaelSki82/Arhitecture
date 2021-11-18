@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.16f1</UnityVersion>
@@ -56,42 +56,63 @@
     <Compile Include="Assets\Codes\EnemyFactory\AsteroidSmall.cs" />
     <Compile Include="Assets\Codes\EnemyFactory\AsteroidBig.cs" />
     <Compile Include="Assets\Codes\DestroybleObject.cs" />
+    <Compile Include="Assets\Codes\Lesson4\SingletonMonoBehaviour.cs" />
+    <Compile Include="Assets\Codes\Lesson4\IService.cs" />
     <Compile Include="Assets\Codes\Interfaces\IRotation.cs" />
     <Compile Include="Assets\Codes\AsteroidFactroy.cs" />
+    <Compile Include="Assets\Codes\Lesson4\Services.cs" />
     <Compile Include="Assets\Codes\Asteroid.cs" />
     <Compile Include="Assets\Codes\EnemyFactory\AsteroidBoss.cs" />
     <Compile Include="Assets\Codes\Views\ShipView.cs" />
     <Compile Include="Assets\Codes\Controllers\EnemyController.cs" />
+    <Compile Include="Assets\Codes\Lesson4\Hp.cs" />
+    <Compile Include="Assets\Codes\Borders.cs" />
     <Compile Include="Assets\Codes\Enemy.cs" />
     <Compile Include="Assets\Codes\Interfaces\IEnemyFactory.cs" />
     <Compile Include="Assets\Codes\EnemyPool.cs" />
     <Compile Include="Assets\Codes\AccelerationMove.cs" />
+    <Compile Include="Assets\Codes\Lesson4\TestSingletonMonoBehaviour.cs" />
+    <Compile Include="Assets\Codes\Interfaces\IShoot.cs" />
+    <Compile Include="Assets\Codes\Interfaces\IEnemy.cs" />
     <Compile Include="Assets\Codes\BulletPoint.cs" />
-    <Compile Include="Assets\Codes\Player.cs" />
+    <Compile Include="Assets\Codes\MainController.cs" />
+    <Compile Include="Assets\Codes\Lesson4\GameObjectBuilder.cs" />
+    <Compile Include="Assets\Codes\Lesson4\Example.cs" />
     <Compile Include="Assets\Codes\BulletPool.cs" />
+    <Compile Include="Assets\Codes\Lesson4\PlayerData.cs" />
+    <Compile Include="Assets\Codes\Lesson4\Service.cs" />
+    <Compile Include="Assets\Codes\Lesson4\ExampleSingleton.cs" />
     <Compile Include="Assets\Codes\MoveMovement.cs" />
     <Compile Include="Assets\Codes\Views\EnemyView.cs" />
     <Compile Include="Assets\Codes\Health.cs" />
     <Compile Include="Assets\Codes\Shooting.cs" />
+    <Compile Include="Assets\Codes\Lesson4\BuilderExtensions.cs" />
+    <Compile Include="Assets\Codes\Lesson4\ExamplePrototype.cs" />
     <Compile Include="Assets\Codes\Bullet.cs" />
     <Compile Include="Assets\Codes\Models\ShipModel.cs" />
+    <Compile Include="Assets\Codes\Lesson4\ServiceLocator.cs" />
     <Compile Include="Assets\Codes\RotationShip.cs" />
     <Compile Include="Assets\Codes\Interfaces\ITakeDamage.cs" />
+    <Compile Include="Assets\Codes\Lesson4\GameObjectVisualBuilder.cs" />
+    <Compile Include="Assets\Codes\Lesson4\ObjectExtensions.cs" />
     <Compile Include="Assets\Codes\Interfaces\IBulletFactory.cs" />
-    <Compile Include="Assets\Codes\GameStarter.cs" />
+    <Compile Include="Assets\Codes\Lesson2and3\GameStarter.cs" />
     <Compile Include="Assets\Codes\Enemys.cs" />
+    <Compile Include="Assets\Codes\Lesson4\ServiceLocatorMonoBehaviour.cs" />
+    <Compile Include="Assets\Codes\Lesson4\ExampleServiceLocator.cs" />
     <Compile Include="Assets\Codes\Interfaces\IMove.cs" />
     <Compile Include="Assets\Codes\EnemyFactory\AsteroidMed.cs" />
+    <Compile Include="Assets\Codes\Lesson4\GameObjectPhysicsBuilder.cs" />
     <Compile Include="Assets\Codes\Interfaces\IAsteroidFactory.cs" />
     <Compile Include="Assets\Codes\NameManager.cs" />
-    <Compile Include="Assets\Codes\Ship.cs" />
+    <Compile Include="Assets\Codes\Lesson2and3\Ship.cs" />
     <Compile Include="Assets\Codes\GameResourses.cs" />
     <Compile Include="Assets\Codes\FactoryEnemy.cs" />
     <Compile Include="Assets\Codes\Interfaces\IController.cs" />
     <Compile Include="Assets\Codes\Models\EnemyModel.cs" />
-    <Compile Include="Assets\Codes\Interfaces\IShoot.cs" />
-    <Compile Include="Assets\Codes\Interfaces\IEnemy.cs" />
-    <Compile Include="Assets\Codes\Borders.cs" />
+    <Compile Include="Assets\Codes\MyAsteroids.cs" />
+    <Compile Include="Assets\Codes\MyAsteroidPool.cs" />
+    <Compile Include="Assets\Codes\MyAsteriodsSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,11 +1,11 @@
 
-using UnityEngine;
+//using UnityEngine;
 
-namespace SkipinAsteroids
-{
-    public sealed class Asteroid : Enemy
-    {
+//namespace SkipinAsteroids
+//{
+//    public sealed class Asteroid : Enemy
+//    {
         
-    }
-}
+//    }
+//}
 

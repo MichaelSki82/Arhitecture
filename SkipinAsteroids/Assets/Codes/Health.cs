@@ -1,4 +1,6 @@
 
+using System;
+
 namespace SkipinAsteroids
 {
     public class Health
@@ -14,9 +16,9 @@ namespace SkipinAsteroids
 
         public void ChangeCurrentHealth(float hp)
         {
-            Current = hp;
+            Current -= hp;
         }
-        
 
+       
     }
 }
