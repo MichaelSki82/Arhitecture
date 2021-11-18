@@ -20,8 +20,8 @@ namespace SkipinAsteroids
         
         public Shooting()
         {
-            _bulletPool = new BulletPool(100);
-
+            //_bulletPool = new BulletPool(100);
+            _bulletPool = ServiceLocator.ServiceLocator.Resolve<BulletPool>();
         }
         
 
@@ -33,7 +33,8 @@ namespace SkipinAsteroids
                 //var temAmmunition = Object.Instantiate(_bullet, _barrel.position, _barrel.rotation);
                 //temAmmunition.AddForce(_barrel.up * _force);
             var _bullet = _bulletPool.GetItem("Bullet");
-            _bullet.transform.position = bulletStartPosition.position;
+            Physics2D.IgnoreCollision(bulletStartPosition.parent.GetComponent<Collider2D>(), _bullet.GetComponent<Collider2D>());
+                _bullet.transform.position = bulletStartPosition.position;
             _bullet.transform.rotation = bulletStartPosition.rotation;
             _bullet.gameObject.SetActive(true);
             _bullet.Rigidbody2D.AddForce(bulletStartPosition.transform.up.normalized *_force, ForceMode2D.Impulse);

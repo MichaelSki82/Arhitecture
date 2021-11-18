@@ -11,6 +11,8 @@ namespace SkipinAsteroids
         public float MinSpeed { get; }
         public float MaxSpeed { get; }
 
+
+
         public EnemyModel(float minSpeed, float maxSpeed)
         {
             MaxSpeed = maxSpeed;

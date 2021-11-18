@@ -42,6 +42,16 @@ namespace SkipinAsteroids
             }
             ReturnToPool();
         }
+
+        public static T GetOrAddComponent<T>(GameObject gameobject) where T: Component
+        {
+            var result = gameobject.GetComponent<T>();
+            if(!result)
+            {
+                result = gameobject.GetComponent<T>();
+            }
+            return result;
+        }
         protected void ReturnToPool()
         {
             transform.localPosition = Vector3.zero;
