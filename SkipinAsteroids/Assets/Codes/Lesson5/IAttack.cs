@@ -1,0 +1,10 @@
+using UnityEngine;
+
+namespace SkipinAsteroids.Adapter
+{
+    public interface IAttack
+    {
+        void Attack(Vector3 position);
+    }
+}
+

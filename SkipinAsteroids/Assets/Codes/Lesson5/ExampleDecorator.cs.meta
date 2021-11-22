@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1391cb7fb4a77294ab1a779e876815fb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _bullet: {fileID: 2005599446028342238, guid: 01fbd8e969109ad40bf9aea4cfbd5f83, type: 3}
+  - _barrelPosition: {instanceID: 0}
+  - _audioSource: {instanceID: 0}
+  - _audioClip: {instanceID: 0}
+  - _audioClipMuffler: {instanceID: 0}
+  - _barrelPositionMuffler: {instanceID: 0}
+  - _muffler: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
